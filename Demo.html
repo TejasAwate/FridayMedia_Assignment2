@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <script src="Demo.js"></script>
+    <style>
+        .validationMessage {
+            color: red;
+            font-style: italic;
+        }
+
+        #myTable {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 600px;
+        }
+
+        #myTable td,
+        #myTable th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #myTable tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #myTable tr:hover {
+            background-color: #ddd;
+        }
+
+        #myTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Validation -->
+    <h1>Validation</h1>
+    <form name="myform1">
+        <span id="nameValidationMessage" class="validationMessage"></span><br />
+        Name: <input type="text" name="name" onfocusout="validateName()" /><br /><br />
+
+        <span id="emailValidationMessage" class="validationMessage"></span><br />
+        Email: <input type="text" name="email" onfocusout="validateEmail()" /><br /><br />
+
+        <span id="phoneValidationMessage" class="validationMessage"></span><br />
+        Phone: <input type="text" name="phone" onfocusout="validatePhone()" /><br />
+    </form>
+
+    <!-- Table Filter -->
+    <h1>Table Filter</h1>
+    Search: <input id="myInput" onkeyup="searchTable()" type="text" /><br /><br />
+
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:60%;">Name</th>
+            <th style="width:40%;">Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbkop</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Koniglich Essen</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Italy</td>
+        </tr>
+        <tr>
+            <td>North/South</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Paris specialites</td>
+            <td>France</td>
+        </tr>
+    </table>
+</body>
+
+</html>
